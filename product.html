@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addmin</title>
+    <meta name="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/product.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="sidebar">
+        <a href="#" class="brand"><img src="img/chicken.png">CHICKEN FOOD</a>
+        <ul class="side-menu">
+            <li><a href="index.html" class="active"><i class='bx bxs-dashboard icon'></i>Trang chủ</a></li>
+            <li class="divider" data-text="main">Tổng quan</li>
+            <li>
+                <a href="#"><i class='bx bx-basket icon'></i>Đơn hàng<i class='bx bx-chevron-right icon-right'></i></a>
+            <ul class="side-dropdown">
+                <li><a href="#">Danh sách đơn hàng</a></li>
+                <li><a href="#">Thêm đơn hàng</a></li>
+                <li><a href="#">Sửa đơn hàng</a></li>
+            </ul>
+            </li>
+            <li><a href="#"><i class='bx bxs-widget icon'></i>Thanh Toán</a></li>
+            <li class="divider" data-text="table and forms">Danh Mục</li>
+            <li><a href="#"><i class='bx bx-notepad icon'></i>Hoá Đơn</a></li>
+            <li>
+                <a href="#"><i class='bx bxs-shopping-bag icon'></i>Sản Phẩm<i class='bx bx-chevron-right icon-right'></i></a>
+            <ul class="side-dropdown">
+                <li><a href="productsp.html">Danh sách sản phẩm</a></li>
+                <li><a href="#">Sửa sản phẩm </a></li>
+                <li><a href="#">Tồn kho</a></li>
+            </ul>
+            </li>
+        </ul>
+        <div class="ads">
+            <div class="wrapper">
+                <a href="#" class="btn-upgrade">Cập nhật</a>
+                <p>Nâng <span>cấp</span> cấp giao diện của bạn thành <span>PRO</span></p>
+            </div>
+        </div>
+    </section>
+    <!--NAVBAR-->
+    <section id="content">
+        <nav>
+            <i class='bx bx-menu toggle-sidebar'></i>
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" placeholder="Search..">
+                    <i class='bx bx-search icon'></i>
+                </div>
+            </form>
+            <a href="#" class="nav-link">
+                <i class="bx bxs-bell icon"></i>
+                <span class="badge">5</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="bx bxs-message-square-dots"></i>
+                <span class="badge">8</span>
+            </a>
+            <span class="divider"></span>
+            <div class="profile">
+                <img src="img/img.nv1.jpg" alt="">
+                <ul class="profile-link">
+                    <li><a href="#"><i class='bx bxs-user-circle icon'></i>Cá nhân</a></li>
+                    <li><a href="#"><i class='bx bxs-cog icon'></i>Cài đặt</a></li>
+<li><a href="#"><i class='bx bxs-log-out-circle icon'></i>Đăng xuất</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--MAIN-->
+        <div class="containers">
+            <div class="headers">
+                <h1>Danh sách đơn hàng</h1>
+                <button onclick="openFormPopup()"><i class='bx bx-plus icon'></i>Thêm đơn hàng</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã đơn hàng</th>
+                        <th>Khách hàng</th>
+                        <th>Ngày thanh toán</th>
+                        <th>Tổng tiền</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTableBody">
+                    <tr>
+                        <td>HD0001</td>
+                        <td class="customer"><img src="img/img.nv3.jpg" alt="Avatar" class="avatar">Sang<span>0001</span></td>
+                        <td>1/06/2024</td>
+                        <td>100.000 VND</td>
+                        <td>
+                            <button class="popup edit"><i class='bx bx-edit-alt icon'></i></button>
+                            <button class="popup delete"><i class='bx bx-trash icon'></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HD0001</td>
+                        <td class="customer"><img src="img/img.nv4.jpg" alt="Avatar" class="avatar">My <span>0002</span></td>
+                        <td>5/05/2024</td>
+                        <td>1.000.000 VND</td>
+                        <td>
+                            <button class="popup edit"><i class='bx bx-edit-alt icon'></i></button>
+                            <button class="popup delete"><i class='bx bx-trash icon'></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HD0001</td>
+                        <td class="customer"><img src="img/img.nv5.jpg" alt="Avatar" class="avatar">Nam<span>003</span></td>
+                        <td>27/06/2024</td>
+                        <td>200.000 VND</td>
+                        <td>
+                            <button class="popup edit"><i class='bx bx-edit-alt icon'></i></button>
+                            <button class="popup delete"><i class='bx bx-trash icon'></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HD0001</td>
+                        <td class="customer"><img src="img/img.nv6.jpg" alt="Avatar" class="avatar">PDT<span>Quỳnh</span></td>
+                        <td>20/06/2023</td>
+                        <td>500.000 VND</td>
+                        <td>
+                            <button class="popup edit"><i class='bx bx-edit-alt icon'></i></button>
+                            <button class="popup delete"><i class='bx bx-trash icon'></i></button>
+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Popup container -->
+            <div id="addOrderPopup" class="popup-container">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('addOrderPopup')">&times;</span>
+                    <h2>Thêm đơn hàng mới</h2>
+                    <div class="form-group">
+                        <label for="orderID">Mã đơn hàng:</label>
+                        <input type="text" id="orderID" name="orderID">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer">Khách hàng:</label>
+                        <input type="text" id="customer" name="customer">
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentDate">Ngày thanh toán:</label>
+                        <input type="date" id="paymentDate" name="paymentDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="totalAmount">Tổng tiền:</label>
+                        <input type="text" id="totalAmount" name="totalAmount">
+                    </div>
+                    <button onclick="addOrder()" style="background: #28a745; border: none; border-radius: 5px; width: 80px; height: 30px;"><i class='bx bxs-user-plus'></i>Thêm</button>
+                </div>
+            </div>
+
+            <!-- Edit Order Popup container -->
+            <div id="editOrderPopup" class="popup-container">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('editOrderPopup')">&times;</span>
+                    <h2>Sửa đơn hàng</h2>
+                    <div class="form-group">
+                        <label for="editOrderID">Mã đơn hàng:</label>
+                        <input type="text" id="editOrderID" name="editOrderID">
+                    </div>
+                    <div class="form-group">
+                        <label for="editCustomer">Khách hàng:</label>
+                        <input type="text" id="editCustomer" name="editCustomer">
+                    </div>
+                    <div class="form-group">
+                        <label for="editPaymentDate">Ngày thanh toán:</label>
+                        <input type="date" id="editPaymentDate" name="editPaymentDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="editTotalAmount">Tổng tiền:</label>
+                        <input type="text" id="editTotalAmount" name="editTotalAmount">
+                    </div>
+                    <button onclick="saveOrder()" style="background: #28a745; border: none; border-radius: 5px; width: 80px; height: 30px;"><i class='bx bxs-save'></i>Lưu</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <script>
+        function openFormPopup() {
+document.getElementById("addOrderPopup").style.display = "block";
+        }
+
+        function closePopup(popupID) {
+            document.getElementById(popupID).style.display = "none";
+        }
+
+        function addOrder() {
+            var orderID = document.getElementById("orderID").value;
+            var customer = document.getElementById("customer").value;
+            var paymentDate = document.getElementById("paymentDate").value;
+            var totalAmount = document.getElementById("totalAmount").value;
+
+            var tableBody = document.getElementById("orderTableBody");
+            var newRow = tableBody.insertRow();
+
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
+
+            cell1.innerHTML = orderID;
+            cell2.innerHTML = customer;
+            cell3.innerHTML = paymentDate;
+            cell4.innerHTML = totalAmount;
+            cell5.innerHTML = `
+                <button class="popup edit"><i class='bx bx-edit-alt icon'></i></button>
+                <button class="popup delete"><i class='bx bx-trash icon'></i></button>
+            `;
+
+            closePopup('addOrderPopup');
+            document.getElementById("orderID").value = '';
+            document.getElementById("customer").value = '';
+            document.getElementById("paymentDate").value = '';
+            document.getElementById("totalAmount").value = '';
+
+            attachEventHandlers();
+        }
+
+        function attachEventHandlers() {
+            var deleteButtons = document.querySelectorAll(".popup.delete");
+            deleteButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    if (confirm("Bạn có chắc chắn muốn xóa đơn hàng này?")) {
+                        var row = this.closest("tr");
+                        row.parentNode.removeChild(row);
+                    }
+                });
+            });
+
+            var editButtons = document.querySelectorAll(".popup.edit");
+            editButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    var row = this.closest("tr");
+                    document.getElementById("editOrderID").value = row.cells[0].innerText;
+                    document.getElementById("editCustomer").value = row.cells[1].innerText;
+                    document.getElementById("editPaymentDate").value = row.cells[2].innerText;
+                    document.getElementById("editTotalAmount").value = row.cells[3].innerText;
+                    document.getElementById("editOrderPopup").setAttribute("data-row-index", row.rowIndex);
+                    openPopup('editOrderPopup');
+                });
+            });
+        }
+
+        function openPopup(popupID) {
+            document.getElementById(popupID).style.display = "block";
+}
+
+        function saveOrder() {
+            var rowIndex = document.getElementById("editOrderPopup").getAttribute("data-row-index");
+            var tableBody = document.getElementById("orderTableBody");
+            var row = tableBody.rows[rowIndex - 1];
+
+            row.cells[0].innerText = document.getElementById("editOrderID").value;
+            row.cells[1].innerText = document.getElementById("editCustomer").value;
+            row.cells[2].innerText = document.getElementById("editPaymentDate").value;
+            row.cells[3].innerText = document.getElementById("editTotalAmount").value;
+
+            closePopup('editOrderPopup');
+        }
+
+        attachEventHandlers();
+    </script>
+    <script src="js/product.js"></script>
+</body>
+</html>

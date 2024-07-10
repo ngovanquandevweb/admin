@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>Admin</title>
+    <meta name="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="sidebar">
+      <a href="#" class="brand"><img src="img/chicken.png" />CHICKEN FOOD</a>
+      <ul class="side-menu">
+        <li>
+          <a href="#" class="active"
+            ><i class="bx bxs-dashboard icon"></i>Trang chủ</a
+          >
+        </li>
+        <li class="divider" data-text="main">Tổng quan</li>
+        <li>
+          <a href="#"
+            ><i class="bx bx-basket icon"></i>Đơn hàng<i
+              class="bx bx-chevron-right icon-right"
+            ></i
+          ></a>
+          <ul class="side-dropdown">
+            <li><a href="product.html">Danh sách đơn hàng</a></li>
+            <li><a href="#">Thêm đơn hàng</a></li>
+            <li><a href="#">Sửa đơn hàng</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="card.html"><i class="bx bxs-widget icon"></i>Thanh Toán</a>
+        </li>
+        <li class="divider" data-text="table and forms">Danh Mục</li>
+        <li>
+          <a href="#"><i class="bx bx-notepad icon"></i>Hoá Đơn</a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="bx bxs-shopping-bag icon"></i>Sản Phẩm<i
+              class="bx bx-chevron-right icon-right"
+            ></i
+          ></a>
+          <ul class="side-dropdown">
+            <li><a href="productsp.html">Danh sách sản phẩm</a></li>
+            <li><a href="#"> Sửa sản phẩm</a></li>
+            <li><a href="#">Tồn Kho</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="ads">
+        <div class="wrapper">
+          <a href="#" class="btn-upgrade">Cập nhật</a>
+          <p>
+            Nâng <span>cấp</span> cấp giao diện của bạn thành <span>PRO</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--NAVBAR-->
+    <section id="content">
+      <nav>
+        <i class="bx bx-menu toggle-sidebar"></i>
+        <form action="#">
+          <div class="form-group">
+            <input type="text" placeholder="Search.." />
+            <i class="bx bx-search icon"></i>
+          </div>
+        </form>
+        <a href="#" class="nav-link">
+          <i class="bx bxs-bell icon"></i>
+          <span class="badge">5</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="bx bxs-message-square-dots"></i>
+          <span class="badge">8</span>
+        </a>
+        <span class="divider"></span>
+        <div class="profile">
+          <img src="img/img.nv1.jpg" alt="" />
+          <ul class="profile-link">
+            <li>
+              <a href="#"><i class="bx bxs-user-circle icon"></i>Cá nhân</a>
+            </li>
+            <li>
+              <a href="#"><i class="bx bxs-cog icon"></i>Cài đặt</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="bx bxs-log-out-circle icon"></i>Đăng xuất</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--MAIN-->
+      <main>
+        <h1 class="title">Thống Kê</h1>
+        <ul class="breadcrumbs">
+          <li><a href="login.html">Đăng nhập </a></li>
+          <li class="divider"></li>
+          /
+          <li><a href="#" class="active">Đăng ký</a></li>
+        </ul>
+        <div class="info-data">
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>5500</h2>
+                <p>Tổng đơn hàng</p>
+              </div>
+              <i class="bx bx-trending-up icon"></i>
+            </div>
+            <span class="progress" data-value="40%"></span>
+            <span class="label">40%</span>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>2000</h2>
+                <p>Trực tiếp</p>
+              </div>
+              <i class="bx bx-trending-down icon down"></i>
+            </div>
+            <span class="progress" data-value="60%"></span>
+            <span class="label">60%</span>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>3500</h2>
+                <p>Online</p>
+              </div>
+              <i class="bx bx-trending-up icon"></i>
+            </div>
+            <span class="progress" data-value="80%"></span>
+            <span class="label">80%</span>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>5500</h2>
+                <p>Doanh thu</p>
+              </div>
+              <i class="bx bx-trending-up icon"></i>
+            </div>
+            <span class="progress" data-value="30%"></span>
+            <span class="label">30%</span>
+          </div>
+        </div>
+        <div class="data">
+          <div class="content-data">
+            <div class="head">
+              <h3>Biểu đồ thống kê</h3>
+              <div class="menu">
+                <i class="bx bx-dots-horizontal-rounded icon"></i>
+                <ul class="menu-link">
+                  <li><a href="#">Xoá</a></li>
+                  <li><a href="#">Lưu</a></li>
+                  <li><a href="#">Tổng quan</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="chart">
+              <div id="chart"></div>
+            </div>
+          </div>
+          <div class="content-data">
+            <div class="head">
+              <h3>Chatbox</h3>
+              <div class="menu">
+                <i class="bx bx-dots-horizontal-rounded icon"></i>
+                <ul class="menu-link">
+                  <li><a href="#">Xoá</a></li>
+                  <li><a href="#">Lưu</a></li>
+                  <li><a href="#">Tổng quan</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="chat-box">
+              <p class="day"><span>Today</span></p>
+              <div class="msg">
+                <img src="img/img.nv2.jpg" alt="" />
+                <div class="chat">
+                  <div class="profile">
+                    <span class="username">Quỳnh Hoa</span>
+                    <span class="time">19:30</span>
+                  </div>
+                  <p>Xin chào</p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">19:30</span>
+                  </div>
+                  <p>Chicken food kính cháo quý khách!</p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">19:30</span>
+                  </div>
+                  <p>
+                    Chúng tôi sẽ trả lời bạn nhanh nhất có thể! hoặc bạn có thể
+                    liên hệ trực tiếp qua số điện thoại của store
+                    (Zalo:0971587205) hoặc (email:admintore@gmail.com)
+                  </p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">19:30</span>
+                  </div>
+                  <p>
+                    Chào bạn bạn đang thắc mắc hay có vấn đề gì về đơn hàng của
+                    mình ạ ?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <form action="#">
+              <div class="form-group">
+                <input type="text" placeholder="Type....." />
+                <button type="submit" class="btn-send">
+                  <i class="bx bxs-send"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <!--MAIN-->
+    </section>
+    <!--NAVBAR-->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
